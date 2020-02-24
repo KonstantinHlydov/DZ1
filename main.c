@@ -25,7 +25,7 @@ int main()
 			
 		}
 	}
-
+	
 	printf("Dvyhmernii massiv:\n");
 	int sch = 0;
 	for (i = 0; i < 5; ++i) {
