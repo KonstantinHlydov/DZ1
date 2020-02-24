@@ -8,31 +8,31 @@ int main()
 	int A[N][M];
 	int i, d;
 
-	for (i = 0; i < 5; ++i) {
-		for (d = 0; d < 5; ++d) {
+	for (i = 0; i < N; ++i) {
+		for (d = 0; d < M; ++d) {
 			if (i == 0 || d == 0) {
 				A[i][d] = 1;
 			}
 			else {
-				A[i][d] = 0;
+				A[i][d] = rand()%2;
 			}
-			if (i % 4 == 0) {
+			if (i == N-1) {
 				A[i][d] = 1;
 			}
-			else if (d % 4 == 0) {
+			else if (d == M-1) {
 				A[i][d] = 1;
 			}
 			
 		}
 	}
-	
+
 	printf("Dvyhmernii massiv:\n");
 	int sch = 0;
-	for (i = 0; i < 5; ++i) {
-		for (d = 0; d < 5; ++d) {
+	for (i = 0; i < N; ++i) {
+		for (d = 0; d < M; ++d) {
 			printf("%d", A[i][d]);
 			++sch;
-			if (sch == 5) {
+			if (sch == M) {
 				printf("\n");
 				sch = 0;
 			}
